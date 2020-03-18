@@ -5,5 +5,11 @@ Given a series of numbers as a string, determine if the number represented by th
 You can expect all test case arguments to be strings representing values greater than 0.*/
 
 function divisibleByThree(str){
- return str.split("").reduce((a,b)=>Number(a)+Number(b))%3 === 0;
+  let sum = 0;
+  for(let i = 0; i < str.length; i++){
+    let element = Number(str[i]);
+    sum += element
+  }
+  if(sum%3 === 0) return true;
+  return false;
 }
